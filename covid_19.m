@@ -83,8 +83,14 @@ function menu_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 if (get(handles.menu,'Value')==1)
-    set(handles.warning,'String','*You havenot chosen any country');
+    img = imread('outbreak-coronavirus-world.png');
+    axes(handles.axes1);
+    imshow(img);
+    set(handles.warning,'String','*You have not chosen any country');
 elseif (get(handles.menu,'Value') == 2)
+        img = imread('outbreak-coronavirus-world.png');
+        axes(handles.axes1);
+        imshow(img);
         set(handles.warning,'String','');
        
         opts = spreadsheetImportOptions("NumVariables", 6);
@@ -106,6 +112,9 @@ elseif (get(handles.menu,'Value') == 2)
         set(handles.totaldeath,'String',dindia.total_deaths(127));
         setappdata(0,'data',dindia);
  elseif (get(handles.menu,'Value') == 3)
+        img = imread('outbreak-coronavirus-world.png');
+        axes(handles.axes1);
+        imshow(img);
         set(handles.warning,'String','');
         
         opts = spreadsheetImportOptions("NumVariables", 6);
@@ -128,6 +137,9 @@ elseif (get(handles.menu,'Value') == 2)
         setappdata(0,'data',dskorea);
         
 elseif (get(handles.menu,'Value') == 4)
+        img = imread('outbreak-coronavirus-world.png');
+        axes(handles.axes1);
+        imshow(img);
         set(handles.warning,'String','');
 
         opts = spreadsheetImportOptions("NumVariables", 6);
@@ -149,6 +161,9 @@ elseif (get(handles.menu,'Value') == 4)
         set(handles.totaldeath,'String',dchina.total_deaths(127));
         setappdata(0,'data',dchina);
 elseif (get(handles.menu,'Value') == 5)
+        img = imread('outbreak-coronavirus-world.png');
+        axes(handles.axes1);
+        imshow(img);
         set(handles.warning,'String','');
 
         opts = spreadsheetImportOptions("NumVariables", 6);
@@ -170,6 +185,9 @@ elseif (get(handles.menu,'Value') == 5)
         set(handles.totaldeath,'String',dus.total_deaths(127));
         setappdata(0,'data',dus);
 elseif (get(handles.menu,'Value') == 6)
+        img = imread('outbreak-coronavirus-world.png');
+        axes(handles.axes1);
+        imshow(img);
         set(handles.warning,'String','');
 
         opts = spreadsheetImportOptions("NumVariables", 6);
